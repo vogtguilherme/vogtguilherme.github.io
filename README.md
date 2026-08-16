@@ -1,37 +1,22 @@
-## Welcome to GitHub Pages
+## vogtguilherme.github.io
 
-You can use the [editor on GitHub](https://github.com/vogtguilherme/vogtguilherme.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Personal portfolio site, built with [Jekyll](https://jekyllrb.com/) and hosted on [GitHub Pages](https://pages.github.com/). Layout and styling are custom (no pre-built theme).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Local development
 
-### Markdown
+Requires Ruby and Bundler. Gems install into `vendor/bundle` so no `sudo` is needed:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+```bash
+bundle install                # first time, or after Gemfile changes
+bundle exec jekyll serve      # preview at http://localhost:4000, live reload
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+To do a one-off build without starting a server:
 
-### Jekyll Themes
+```bash
+bundle exec jekyll build      # outputs to _site/
+```
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/vogtguilherme/vogtguilherme.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+### Deployment
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Pushes to `master` are built and deployed automatically by the GitHub Actions workflow at `.github/workflows/pages.yml`.
