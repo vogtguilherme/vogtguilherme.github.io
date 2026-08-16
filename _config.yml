@@ -1,1 +1,14 @@
-theme: jekyll-theme-cayman
+title: "Your Name"
+tagline: "Software Engineer"
+description: "Placeholder bio — a couple of sentences about who you are, what you build, and what you're looking for. Replace this with your real bio."
+email: "you@example.com"
+github_username: "yourusername"
+linkedin_username: "yourusername"
+
+exclude:
+  - CLAUDE.md
+  - CLAUDE.local.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .claude
