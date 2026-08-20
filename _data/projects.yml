@@ -1,3 +1,8 @@
+- title: "Example Project"
+  description: "Placeholder case study page — sectioned layout template with sidebar nav, ported from Figma. Replace with a real project write-up."
+  link: "/projects/example/"
+  tags: ["Placeholder", "Case Study"]
+
 - title: "Project One"
   description: "Placeholder description — what the project does, the problem it solves, and what you built it with."
   link: "https://github.com/yourusername/project-one"

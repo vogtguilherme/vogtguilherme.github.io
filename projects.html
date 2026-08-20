@@ -16,7 +16,11 @@ permalink: /projects/
         {% for tag in project.tags %}<li>{{ tag }}</li>{% endfor %}
       </ul>
       {% endif %}
+      {% if project.link contains "://" %}
       <a class="project-link" href="{{ project.link }}" target="_blank" rel="noopener">View project &rarr;</a>
+      {% else %}
+      <a class="project-link" href="{{ project.link | relative_url }}">View project &rarr;</a>
+      {% endif %}
     </article>
     {% endfor %}
   </div>
