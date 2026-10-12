@@ -1,10 +1,11 @@
 ---
-layout: default
-title: Home
+layout: landing
 ---
 
-<section class="project-list">
-  {% for project in site.data.projects %}
-  <a class="project-title" href="{{ '/projects/' | append: project.slug | append: '/' | relative_url }}">{{ project.title }}</a>
-  {% endfor %}
-</section>
+<main class="landing">
+  <div class="landing-heading">
+    <h1 class="landing-name">GUILHERME</h1>
+    <p class="landing-role">technical game designer</p>
+  </div>
+  <a class="landing-enter" href="{{ '/home/' | relative_url }}">enter website</a>
+</main>
