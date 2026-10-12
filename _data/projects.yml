@@ -1,14 +1,14 @@
-- title: "Project One"
+- title: "FORTNITE"
   description: "Placeholder description — what the project does, the problem it solves, and what you built it with."
-  link: "https://github.com/yourusername/project-one"
+  slug: "fortnite"
   tags: ["Placeholder", "Tech"]
 
-- title: "Project Two"
+- title: "LOONEY TUNES"
   description: "Placeholder description — what the project does, the problem it solves, and what you built it with."
-  link: "https://github.com/yourusername/project-two"
+  slug: "looney-tunes"
   tags: ["Placeholder", "Tech"]
 
-- title: "Project Three"
+- title: "ASPIRE: INA’S TALE"
   description: "Placeholder description — what the project does, the problem it solves, and what you built it with."
-  link: "https://github.com/yourusername/project-three"
+  slug: "aspire-inas-tale"
   tags: ["Placeholder", "Tech"]

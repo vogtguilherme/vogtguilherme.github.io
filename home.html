@@ -1,0 +1,11 @@
+---
+layout: default
+title: Home
+permalink: /home/
+---
+
+<section class="project-list">
+  {% for project in site.data.projects %}
+  <a class="project-title" href="{{ '/projects/' | append: project.slug | append: '/' | relative_url }}">{{ project.title }}</a>
+  {% endfor %}
+</section>
