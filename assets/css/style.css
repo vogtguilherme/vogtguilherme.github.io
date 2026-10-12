@@ -1,12 +1,15 @@
 :root {
-  --color-bg: #ffffff;
-  --color-text: #1a1a1a;
-  --color-muted: #6b7280;
-  --color-border: #e5e7eb;
-  --color-accent: #2563eb;
-  --color-card-bg: #f9fafb;
-  --max-width: 780px;
+  --color-bg: #000000;
+  --color-text: #ffffff;
+  --color-muted: #a1a1aa;
+  --color-border: #27272a;
+  --color-accent: #60a5fa;
+  --color-card-bg: #0a0a0a;
+  --gutter: 1.5rem;
+  --max-width: calc(1152px + 2 * var(--gutter));
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --font-nav: "Iceland", var(--font-sans);
+  --font-display: "Chakra Petch", var(--font-sans);
 }
 
 * {
@@ -32,32 +35,47 @@ a:hover {
 
 /* Header */
 
-.site-header {
-  border-bottom: 1px solid var(--color-border);
-}
-
 .site-nav {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1.25rem 1.5rem;
+  padding: 0 var(--gutter);
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  column-gap: 20px;
+  font-family: var(--font-nav);
+  font-size: clamp(1.5rem, 1.67vw, 2rem);
+}
+
+.site-nav a {
+  width: 215px;
+  height: 60px;
+  display: flex;
   align-items: center;
-}
-
-.site-name {
-  font-weight: 600;
   color: var(--color-text);
+  white-space: nowrap;
 }
 
-.nav-links a {
-  margin-left: 1.5rem;
+.site-nav a::before {
+  content: ">";
+  width: 0.927em;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  :root {
+    --gutter: 1rem;
+  }
+
+  .site-nav a {
+    width: auto;
+    height: 48px;
+  }
+}
+
+.site-nav a:hover {
+  text-decoration: none;
   color: var(--color-muted);
-  font-size: 0.95rem;
-}
-
-.nav-links a:hover {
-  color: var(--color-text);
 }
 
 /* Main sections */
@@ -65,7 +83,7 @@ a:hover {
 main {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 var(--gutter);
 }
 
 .hero {
@@ -92,6 +110,32 @@ main {
 .section h2 {
   font-size: 1.5rem;
   margin: 0 0 1.25rem;
+}
+
+/* Home project list */
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: calc(4px + 50px) 0 50px;
+}
+
+.project-title {
+  display: flex;
+  align-items: center;
+  min-height: 1.25em;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 6.67vw, 8rem);
+  line-height: normal;
+  color: var(--color-text);
+}
+
+.project-title:hover {
+  text-decoration: none;
+  color: var(--color-muted);
 }
 
 /* Projects */

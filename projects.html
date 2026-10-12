@@ -16,7 +16,7 @@ permalink: /projects/
         {% for tag in project.tags %}<li>{{ tag }}</li>{% endfor %}
       </ul>
       {% endif %}
-      <a class="project-link" href="{{ project.link }}" target="_blank" rel="noopener">View project &rarr;</a>
+      <a class="project-link" href="{{ '/projects/' | append: project.slug | append: '/' | relative_url }}">View project &rarr;</a>
     </article>
     {% endfor %}
   </div>
